@@ -1,0 +1,96 @@
+#include <LiquidCrystal_I2C.h>
+
+// Construct an LCD object and pass it the 
+// I2C address, width (in characters) and
+// height (in characters). Depending on the
+// Actual device, the IC2 address may change.
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+//currency initial values for quarter, dime, nickel penny, and bank savings
+float Q = 0.25;
+float D = 0.10;
+float N = 0.05;
+float P = 0.01;
+float Savings = 0.00;
+float Goal = 50.00;
+
+//initializing digital pins to be read
+int Qpin = 2;
+int Dpin = 3;
+int Npin = 4;
+int Ppin = 5;
+
+
+void setup() {  
+
+  pinMode(Qpin, INPUT);
+  pinMode(Dpin, INPUT);
+  pinMode(Npin, INPUT);
+  pinMode(Ppin, INPUT);
+  
+  Serial.begin(9600);
+  lcd.init();
+
+  // Turn on the backlight.
+  lcd.backlight(); // Move the cursor 5 characters to the right and
+  // zero characters down (line 1).
+  
+  lcd.setCursor(3, 1);
+  lcd.print("Welcome to");
+  delay(1500);
+
+  lcd.setCursor(3, 0);
+  lcd.print("Welcome to");
+  lcd.setCursor(3, 1);
+  lcd.print("          ");
+  lcd.setCursor(2, 1);
+  lcd.print("The Bank");
+  delay(1500);
+
+  lcd.setCursor(3, 0);
+  lcd.print("          ");
+  lcd.setCursor(2, 0);
+  lcd.print("The Bank");
+  lcd.setCursor(2, 1);
+  lcd.print("            ");
+  lcd.setCursor(1, 1);
+  lcd.print("By Group 17");
+  delay(3000); 
+  
+  lcd.setCursor(0, 0); 
+  lcd.print("                ");
+  lcd.setCursor(0, 1);
+  lcd.print("                ");
+  
+  lcd.setCursor(0,0);
+  lcd.print("Goal: ");
+
+  lcd.setCursor(0,1);
+  lcd.print("Savings: ");
+}
+
+void loop() {  
+   // read the input on digital pins:
+  int Qread = digitalRead(Qpin);
+  int Dread = digitalRead(Dpin);
+  int Nread = digitalRead(Npin);
+  int Pread = digitalRead(Ppin);
+
+  if (Qread == 1){
+    Savings = Savings + Q;
+  } else if (Dread == 1){
+    Savings = Savings + D;
+  } else if (Nread == 1) {
+    Savings = Savings + N;
+  } else if (Pread ==1){
+    Savings = Savings + P;
+  }
+  
+  //Goal display
+    lcd.setCursor(7,0);
+    lcd.print(Goal);
+  // print out the new savings amount value
+    lcd.setCursor(9, 1);
+    lcd.print(Savings);    
+    delay(1250);
+}
