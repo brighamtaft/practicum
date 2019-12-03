@@ -1,0 +1,38 @@
+(411RoughDraft.brd, 411RoughtDraft.sch) - status: complete - the 411roughDraft (.brd and .sch) are the original design files for our device. They are messy and error prone and do not hold any merit in the final design
+
+(BOM.-Sheet1.pdf) - status: incomplete - Bill of Materials - has the appropriate quantity and compnents necessary for the PCB population but has yet to include the necessary materials needed for the container.
+
+(BankCode_rev1) - status: complete - The first complete rev for the arduino code used. Edit this to change the function of the microprocessor
+
+(CointControllerV1.brd, CointControllerV1.sch) - status: complete - The complete schematic and brd layout for the device. Send the .brd file in to be printed.
+
+(Design.pdf) - status: complete - basic block diagram of the basic functions of our device
+
+(NextLevelDesign.pdf) - status: complete - a more detailed diagram of the functionality of our device
+
+(PDS.docx) - status: complete - Product Design Specifications document
+
+(ProjectBrainstorming.docx, Top.3.Ideas.docx) - status: complete - record of the project ideas for our group
+
+(preliminarySchematicIMG.jfif, preliminarySchematic.sch) - status: complete - the very first incomplete basic schematic of device
+
+(prototype.jpg) - status: complete - the first implemented device using buttons instead of sensors and an arduino
+
+(testProcedure.docx) - status: incomplete - document describing the test procedure for the device
+
+Programming instruction:
+1) Flash the arduino bootloader onto the atmega328p. This can be done following the online tutorial found in this link: https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard
+2) Once the bootloader has been flashed you can solder the atmega328p to the board or insert it into a sleeve if you chose to purchase one.
+3) Once the entire board is populated you can program the atmega328p with the BankCode_rev1 code. This can be done following the tutorial found at the same link as burning the bootloader. The difference in the connections is described below
+
+Connections: (remember to remove the atmega328p from the arduinouno before programming)
+  1) Arduino TX pin connects to pin5 of the 6x1 pin header
+  2) Arduino RX pin connects to pin4 of the 6x1 pin header
+  3) Arduino Vcc pin connects to pin2 of the 3x2 pin header
+  4) Arduino gnd pin connects to pin6 of the 3x2 pin header
+  5) Arduino reset pin connects to pin5 of the 3x2 pin header
+  
+ 4) Once the wiring has been done upload the CoinCollector code to arduino as you normally would with the board selected being Arduino nano (atmega328p processor selected).
+ 5) The board should be ready to be wired up to the LCD screen and sensors. And you can begin the test procedure (see testProcedure.docx)
+ 
+ 
