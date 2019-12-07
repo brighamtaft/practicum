@@ -2,6 +2,8 @@
 
 (BOM.-Sheet1.pdf) - status: incomplete - Bill of Materials - has the appropriate quantity and compnents necessary for the PCB population but has yet to include the necessary materials needed for the container.
 
+(BOM_Finalrev.xsl) - status complete - Bill of Materilas - up to date includes all necessary compoenents to be purchased.
+
 (BankCode_rev1) - status: complete - The first complete rev for the arduino code used. Edit this to change the function of the microprocessor
 
 (CointControllerV1.brd, CointControllerV1.sch) - status: complete - The complete schematic and brd layout for the device. Send the .brd file in to be printed.
