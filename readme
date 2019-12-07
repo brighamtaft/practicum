@@ -10,6 +10,8 @@
 
 (Coin Sort Face v5.stl, Coin Sort Ramp v5.stl) - status: complete but untested. These files have the same dimensions as the laser cut acrylic sorter and should work but have not been 3d printed and tested.
 
+(TestPlan.pdf) - status: assignment comp[lete - test documentation with descriptions. Minimal test case in accordance with the assignment.
+
 (Coin Sorter (Sized) v1.f3d) - status: complete but untested. This is a working 3D CAD file for fusion 360. It has been optimized to use minimum material and fit in a small print bed. It will require extensive supports to print with SLA style printer and would be recommended to split at the intersection of the ramp before printing in that style 3D printer.
 
 (Design.pdf) - status: complete - basic block diagram of the basic functions of our device
@@ -27,6 +29,8 @@
 (testProcedure.docx) - status: incomplete - document describing the test procedure for the device
 
 (T17 HW7 Test Plan.pdf) - status: complete - Homework based test plan.
+
+
 
 (BetterSortV2.dxf) - status: Complete - Laser Printable file for acrylic coin sorter. Known to work with cast acrylic but not tested on other materials.
 
