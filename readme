@@ -6,8 +6,9 @@
 
 (CointControllerV1.brd, CointControllerV1.sch) - status: complete - The complete schematic and brd layout for the device. Send the .brd file in to be printed.
 
-(Coin Sort Face v5.stl, Coin Sort Ramp v5.stl) - status: complete but untested. These files have the same dimensions as the laser cut acrylic sorter and should
-work but have not been 3d printed and tested.
+(Coin Sort Face v5.stl, Coin Sort Ramp v5.stl) - status: complete but untested. These files have the same dimensions as the laser cut acrylic sorter and should work but have not been 3d printed and tested.
+
+(Coin Sorter (Sized) v1.f3d) - status: complete but untested. This is a working 3D CAD file for fusion 360. It has been optimized to use minimum material and fit in a small print bed. It will require extensive supports to print with SLA style printer and would be recommended to split at the intersection of the ramp before printing in that style 3D printer.
 
 (Design.pdf) - status: complete - basic block diagram of the basic functions of our device
 
