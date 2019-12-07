@@ -20,6 +20,10 @@
 
 (testProcedure.docx) - status: incomplete - document describing the test procedure for the device
 
+(BetterSortV2.dxf) - status: Complete - Laser Printable file for acrylic coin sorter. Known to work with cast acrylic but not tested on other materials.
+
+
+
 Programming instruction:
 1) Flash the arduino bootloader onto the atmega328p. This can be done following the online tutorial found in this link: https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard
 2) Once the bootloader has been flashed you can solder the atmega328p to the board or insert it into a sleeve if you chose to purchase one.
